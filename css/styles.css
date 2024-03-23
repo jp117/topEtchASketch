@@ -1,5 +1,29 @@
-#board {
-  background-color: black;
-  height: 50px;
-  width: 50px;
+body {
+  height: 100vh;
 }
+
+#board {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  height: 90vh;
+  max-width: 90vh;
+} 
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.boardRow {
+  background-color: aquamarine;
+  display: flex;
+  flex: auto;
+}
+
+.boardSquare {
+  border-color: black;
+  border-style:solid;
+  flex: auto;
+}
+
