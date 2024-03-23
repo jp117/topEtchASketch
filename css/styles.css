@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   height: 90vh;
   max-width: 90vh;
+
 } 
 
 div {
@@ -16,14 +17,14 @@ div {
 }
 
 .boardRow {
-  background-color: aquamarine;
   display: flex;
   flex: auto;
 }
 
 .boardSquare {
-  border-color: black;
-  border-style:solid;
   flex: auto;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
 }
 
