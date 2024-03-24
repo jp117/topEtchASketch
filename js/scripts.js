@@ -35,16 +35,19 @@ function draw() {
   const hoverBoard = document.getElementsByClassName("boardSquare");
   for (let hoverArray = 0; hoverArray < hoverBoard.length; hoverArray++){
     hoverBoard[hoverArray].addEventListener("mouseover", (event) => {
-      event.target.style.backgroundColor = getRandomColor();
+      let opacity = parseFloat(event.target.style.backgroundColor.split(',')[3]);
+      if (opacity <= .9) {
+        opacity += .1;
+      } else if (!opacity && !event.target.style.backgroundColor){
+        opacity = .1;
+      }
+      event.target.style.backgroundColor = `rgba(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()}, ${opacity})`;
     })
   } 
 }
 
 function getRandomColor(){
-  let x = Math.floor(Math.random() * 256);
-  let y = Math.floor(Math.random() * 256);
-  let z = Math.floor(Math.random() * 256);
-  return `rgb(${x}, ${y}, ${z})`;
+  return Math.floor(Math.random() * 256);
 }
 
 
